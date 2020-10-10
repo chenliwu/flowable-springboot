@@ -6,11 +6,12 @@ server:
 spring:
   profiles:
     active: dev
-##########################################################
-###################  开发环境的profile  ###################
-##########################################################
+  ##########################################################
+  ###################  开发环境的profile  ###################
+  ##########################################################
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/test
+    ## serverTimezone=UTC&nullCatalogMeansCurrent=true 解决启动报错问题
+    url: jdbc:mysql://127.0.0.1:3307/flowable_test?serverTimezone=UTC&nullCatalogMeansCurrent=true
     username: root
     password: 123456
 
